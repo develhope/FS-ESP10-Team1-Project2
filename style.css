@@ -1,0 +1,79 @@
+.Get-Doggy{
+    color: rgba(91,33,182);
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.Times{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2%;
+    font-size: 18px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Cada columna ocupa un tercio del contenedor */
+    justify-items: center;
+    gap: 50px; /* Espacio entre las tarjetas */
+    padding: 300px;
+    margin-top: -200px;
+}
+
+.card{
+    width: 20rem;
+    height: 35rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+    
+    
+}
+
+.precio{
+    text-align: right;
+    font-family: "Josefin Sans", sans-serif;
+    color:rgba(91,33,182) ;
+    margin-right: 15px;
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+
+
+.card-img-top{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-container {
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    border-bottom: 1px solid #ccc;
+}
+
+.image-container:hover .card-img-top {
+    transform: scale(1.1); /* Aplicar un zoom del 10% al pasar el cursor */
+}
+
+.card-title{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 28px;
+    color: rgba(91,33,182);
+    font-weight: lighter, bold;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.card-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 15px;
+    color: rgb(84, 84, 84);
+    font-weight: lighter;
+    
+}
