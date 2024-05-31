@@ -1,5 +1,6 @@
 const cards = [
   {
+    id: "1",
     src: "media/mockup-fc750eaa.webp",
     alt: "doggy",
     title: "The Unicorn",
@@ -7,6 +8,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "2",
     src: "media/mockup-6aeffeca.webp",
     alt: "doggy",
     title: "The Fashionista",
@@ -14,6 +16,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "3",
     src: "media/mockup-de719380.webp",
     alt: "doggy",
     title: "The Drooler",
@@ -21,6 +24,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "4",
     src: "media/mockup-954d2eff.webp",
     alt: "doggy",
     title: "The Player",
@@ -28,6 +32,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "5",
     src: "media/mockup-306a1416.webp",
     alt: "doggy",
     title: "Scaredy Dog",
@@ -35,6 +40,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "6",
     src: "media/mockup-f7e1805f.webp",
     alt: "doggy",
     title: "The Pee-er",
@@ -42,6 +48,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "7",
     src: "media/mockup-be79c598.webp",
     alt: "doggy",
     title: "The Brawl",
@@ -49,6 +56,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "8",
     src: "media/mockup-52c49241.webp",
     alt: "doggy",
     title: "Tip Toe Pub",
@@ -56,6 +64,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "9",
     src: "media/mockup-a979a43d.webp",
     alt: "doggy",
     title: "Dog Bath",
@@ -63,6 +72,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "10",
     src: "media/mockup-a0529cee.webp",
     alt: "doggy",
     title: "Tongue Wagger",
@@ -70,6 +80,7 @@ const cards = [
     precio: "$9.99",
   },
   {
+    id: "11",
     src: "media/mockup-295f01d2.webp",
     alt: "doggy",
     title: "Angry Dog",
@@ -78,12 +89,23 @@ const cards = [
   },
 ];
 
-function renderCards(cards) {
-  const container = document.querySelector(".card-container");
-  container.innerHTML = ""; // Clear existing content
 
+
+function specificData(id) {
+  return cards.filter(itemCard => itemCard.id === id);
+}
+
+function renderCards(cards) {
+  const container = document.querySelector(".carta");
+  container.innerHTML = ""; // Clear existing content
+  
+  
+  
   cards.forEach((card) => {
+    
     const cardElement = document.createElement("div");
+    
+
     cardElement.className = "card";
     cardElement.innerHTML = `
       <div class="image-container">
