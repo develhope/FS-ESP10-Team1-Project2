@@ -14,7 +14,7 @@
     font-size: 18px;
 }
 
-.card-container {
+.carta {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* Cada columna ocupa un tercio del contenedor */
     justify-items: center;
@@ -37,7 +37,28 @@
     color:rgba(91,33,182) ;
     margin-right: 15px;
     font-size: 24px;
-    margin-top: 25px;
+    
+}
+
+.precio {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f5f3ff;
+    color: #3f0071;
+    font-size: 1.5em;
+    font-weight: bold;
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+}
+
+.precio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background-color: #f5f3ff;
 }
 
 
@@ -75,5 +96,6 @@
     margin-left: 15px;
     color: rgb(84, 84, 84);
     font-weight: lighter;
+    margin-bottom: 20px;
     
 }
