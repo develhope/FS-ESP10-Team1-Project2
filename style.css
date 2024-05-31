@@ -14,7 +14,7 @@
     font-size: 18px;
 }
 
-.carta {
+.card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* Cada columna ocupa un tercio del contenedor */
     justify-items: center;

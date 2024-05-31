@@ -90,35 +90,34 @@ const cards = [
 ];
 
 
-
-function specificData(id) {
-  return cards.filter(itemCard => itemCard.id === id);
-}
-
 function renderCards(cards) {
-  const container = document.querySelector(".carta");
+  const container = document.querySelector(".card-container");
   container.innerHTML = ""; // Clear existing content
   
   
   
   cards.forEach((card) => {
-    
-    const cardElement = document.createElement("div");
-    
-
-    cardElement.className = "card";
-    cardElement.innerHTML = `
-      <div class="image-container">
-        <img src="${card.src}" class="card-img-top" alt="${card.alt}">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">${card.title}</h5>
-        <p class="card-text">${card.text}</p>
-        <div class="precio">${card.precio}</div>
-      </div>
-    `;
-    container.appendChild(cardElement);
+      const cardLink = document.createElement("a");
+      cardLink.href = `theplayer.html?id=${card.id}`;
+      const cardElement = document.createElement("div");
+      
+  
+      cardElement.className = "card";
+      cardElement.innerHTML = `
+          <div class="image-container">
+          <img src="${card.src}" class="card-img-top" alt="${card.alt}">
+          </div>
+          <div class="card-body">
+          <h5 class="card-title">${card.title}</h5>
+          <p class="card-text">${card.text}</p>
+          <div class="precio">${card.precio}</div>
+          </div>
+      `;
+      cardLink.appendChild(cardElement)
+      container.appendChild(cardLink);
   });
 }
 
-renderCards(cards);
+document.addEventListener('DOMContentLoaded', function() {
+  renderCards(cards);
+});
