@@ -1,0 +1,126 @@
+.card {
+    width: 25rem; /* Adjust as needed */
+    margin: auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures content does not overflow outside the card */
+    
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease;
+    transform-origin: center center; /* Ensures the image zooms from the center */
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 40%; /* Adjust as needed to fit 2-3 images per slide */
+    height: auto;
+    
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 8rem;
+    margin-bottom: 2rem; /* Agregamos un margen inferior para separar de otros elementos */
+    margin-left: 30rem;
+}
+
+.info {
+    flex: 1; /* Permitimos que el contenido de .info ocupe el espacio restante */
+    margin-left: 2rem; /* Agregamos un margen izquierdo para separar de la tarjeta */
+    font-family: "Josefin Sans", sans-serif;
+    color: blueviolet;
+}
+
+.info h4{
+    color: black;
+}
+
+.info h2{
+    font-size: 30px;
+}
+
+.back {
+    background-color: white; /* Fondo blanco */
+    border: 2px solid blueviolet; /* Borde morado */
+    padding: 10px 80px; /* Espaciado interno para hacer el rectángulo más grande */
+    text-align: center; /* Centrar el texto horizontalmente */
+    display: inline-block; /* Asegurar que el tamaño del contenedor sea solo tan grande como el contenido */
+    border-radius: 1px; /* Opcional: bordes redondeados */
+    margin-bottom: 1rem; /* Ajustamos el margen inferior de .back */
+    color: blueviolet;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.add {
+    background-color: blueviolet;
+    border: 2px solid blueviolet;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    border-radius: 1px;
+    margin-top: 1rem;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    width: 18rem;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
