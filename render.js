@@ -1,5 +1,4 @@
 const cards = [
-<<<<<<< HEAD
   {
     id: "1",
     src: "media/mockup-fc750eaa.webp",
