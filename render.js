@@ -99,6 +99,7 @@ const cards = [
     cards.forEach((card) => {
         const cardLink = document.createElement("a");
         cardLink.href = `theplayer.html?id=${card.id}`;
+        cardLink.style = "text-decoration: none"
         const cardElement = document.createElement("div");
         
     
@@ -121,4 +122,3 @@ const cards = [
 document.addEventListener('DOMContentLoaded', function() {
     renderCards(cards);
 });
-  
