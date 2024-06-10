@@ -67,7 +67,7 @@
 .container {
     display: flex;
     align-items: flex-start;
-    margin-top: 8rem;
+    padding-top: 8rem;
     margin-bottom: 2rem; /* Agregamos un margen inferior para separar de otros elementos */
     margin-left: 30rem;
 }

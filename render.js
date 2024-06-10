@@ -88,6 +88,10 @@ const cards = [
       precio: "$9.99",
     },
   ];
+  function saveLocalStorage() {
+    localStorage.setItem("cards", JSON.stringify(cards));
+  }
+  saveLocalStorage();
   
   
   function renderCards(cards) {
