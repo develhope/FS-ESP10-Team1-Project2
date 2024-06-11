@@ -6,6 +6,7 @@ const cards = [
       title: "The Unicorn",
       text: "You know he's got his own personal stylist.",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "2",
@@ -14,6 +15,7 @@ const cards = [
       title: "The Fashionista",
       text: "They exist!",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "3",
@@ -22,6 +24,7 @@ const cards = [
       title: "The Drooler",
       text: "Look at that crazy and cute face!",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "4",
@@ -30,6 +33,7 @@ const cards = [
       title: "The Player",
       text: "Catch this sticker today!",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "5",
@@ -38,6 +42,7 @@ const cards = [
       title: "Scaredy Dog",
       text: "No surprise courage and him are best friends.",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "6",
@@ -46,6 +51,7 @@ const cards = [
       title: "The Pee-er",
       text: "Public enemy No. 1",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "7",
@@ -54,6 +60,7 @@ const cards = [
       title: "The Brawl",
       text: "Let's just say a lot of bones were broken...and chewed on.",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "8",
@@ -62,6 +69,7 @@ const cards = [
       title: "Tip Toe Pub",
       text: "So sneaky...",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "9",
@@ -70,6 +78,7 @@ const cards = [
       title: "Dog Bath",
       text: "Scrub em clean!",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "10",
@@ -78,6 +87,7 @@ const cards = [
       title: "Tongue Wagger",
       text: "Tis a slobby one",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
     {
       id: "11",
@@ -86,6 +96,7 @@ const cards = [
       title: "Angry Dog",
       text: "Isn't he cute when he's angry?",
       precio: "$9.99",
+      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
     },
   ];
   function saveLocalStorage() {
@@ -122,7 +133,50 @@ const cards = [
         container.appendChild(cardLink);
     });
   }
+function cargarCard(id) {
+  let card = cards[id-1];
+  let arrayImagenes = card.imagenes;
+  let imagenTop = document.getElementById("principal");
+  let divCarrousel1 = document.getElementById("carousel-item");
+  let divCarrousel2 = document.getElementById("carrouselDiv2");
   
-document.addEventListener('DOMContentLoaded', function() {
-  renderCards(cards);
-});
+  // let imagenPrincipal = document.createElement("img");
+  // imagenPrincipal.src = card.imagenes[0]; 
+  // imagen1.appendChild(imagenPrincipal);
+  // let imagenCarrousel1 = document.createElement("img");
+  // imagenPrincipal.src = card.imagenes[1]; 
+  // imagen1.appendChild(imagenCarrousel1);
+  // let imagenCarrousel2 = document.createElement("img");
+  // imagenPrincipal.src = card.imagenes[2]; 
+  // imagen1.appendChild(imagenCarrousel2);
+  // let imagenCarrousel3 = document.createElement("img");
+  // imagenPrincipal.src = card.imagenes[3]; 
+  // imagen1.appendChild(imagenCarrousel3);
+  // let imagenCarrousel4 = document.createElement("img");
+  // imagenPrincipal.src = card.imagenes[4]; 
+  // imagen1.appendChild(imagenCarrousel4);
+  // let imagenCarrousel5 = document.createElement("img");
+  // imagenPrincipal.src = card.imagenes[5]; 
+  // imagen1.appendChild(imagenCarrousel5);
+  // let imagenCarrousel6 = document.createElement("img");
+  // imagenPrincipal.src = card.imagenes[5]; 
+  // imagen1.appendChild(imagenCarrousel6);
+for (let index = 0; index < card; index++) {
+  if (index === 0) {
+    let imagenPrincipal = document.createElement("img");
+    imagenPrincipal.src = card.imagenes[0]; 
+    imagenTop.appendChild(imagenPrincipal);
+  } else if (index < 5) {
+    let imagenCarrousel = document.createElement("img");
+    imagenCarrousel.src = card.imagenes[index]; 
+    divCarrousel1.appendChild(imagenCarrousel)
+  } else {
+    let imagenCarrousel2 = document.createElement("img");
+    imagenCarrousel2.src = card.imagenes[index]; 
+    divCarrousel2.appendChild(imagenCarrousel2);
+  }{
+  }
+  
+}
+
+}
