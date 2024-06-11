@@ -161,11 +161,9 @@ function cargarCard(id) {
   // let imagenCarrousel6 = document.createElement("img");
   // imagenPrincipal.src = card.imagenes[5]; 
   // imagen1.appendChild(imagenCarrousel6);
-for (let index = 0; index < card; index++) {
+for (let index = 0; index < card.imagenes.length; index++) {
   if (index === 0) {
-    let imagenPrincipal = document.createElement("img");
-    imagenPrincipal.src = card.imagenes[0]; 
-    imagenTop.appendChild(imagenPrincipal);
+    imagenTop.src = card.imagenes[0]; 
   } else if (index < 5) {
     let imagenCarrousel = document.createElement("img");
     imagenCarrousel.src = card.imagenes[index]; 
