@@ -1,102 +1,102 @@
 const cards = [
     {
       id: "1",
-      src: "media/mockup-fc750eaa.webp",
+      src: "media/theUnicorn1.webp",
       alt: "doggy",
       title: "The Unicorn",
-      text: "You know he's got his own personal stylist.",
+      text: "They exist!",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/theUnicorn1.webp","media/theUnicorn1.webp", "media/theUnicorn2.webp", "media/theUnicorn3.webp", "media/theUnicorn4.webp", "media/theUnicorn5.webp", "media/theUnicorn6.webp"]
     },
     {
       id: "2",
-      src: "media/mockup-6aeffeca.webp",
+      src: "media/theFashionista1.webp",
       alt: "doggy",
       title: "The Fashionista",
-      text: "They exist!",
+      text: "You know he's got his own personal stylist.",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/theFashionista1.webp","media/theFashionista1.webp", "media/theFashionista2.webp", "media/theFashionista3.webp", "media/theFashionista4.webp", "media/theFashionista5.webp", "media/theFashionista6.webp"]
     },
     {
       id: "3",
-      src: "media/mockup-de719380.webp",
+      src: "media/theDrooler1.webp",
       alt: "doggy",
       title: "The Drooler",
       text: "Look at that crazy and cute face!",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/theDrooler1.webp","media/theDrooler1.webp", "media/theDrooler2.webp", "media/theDrooler3.webp", "media/theDrooler4.webp", "media/theDrooler5.webp", "media/theDrooler6.webp"]
     },
     {
       id: "4",
-      src: "media/mockup-954d2eff.webp",
+      src: "media/theplayer1.webp",
       alt: "doggy",
       title: "The Player",
       text: "Catch this sticker today!",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/thePlayer1.webp","media/thePlayer1.webp", "media/thePlayer2.webp", "media/thePlayer3.webp", "media/theplayer4.webp", "media/theplayer5.webp", "media/theplayer6.webp"]
     },
     {
       id: "5",
-      src: "media/mockup-306a1416.webp",
+      src: "media/scaredyDog1.webp",
       alt: "doggy",
       title: "Scaredy Dog",
       text: "No surprise courage and him are best friends.",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/scaredyDog1.webp","media/scaredyDog1.webp", "media/scaredyDog2.webp", "media/scaredyDog3.webp", "media/scaredyDog4.webp", "media/scaredyDog5.webp", "media/scaredyDog6.webp"]
     },
     {
       id: "6",
-      src: "media/mockup-f7e1805f.webp",
+      src: "media/thePee-er1.webp",
       alt: "doggy",
       title: "The Pee-er",
       text: "Public enemy No. 1",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/thePee-er1.webp","media/thePee-er1.webp", "media/thePee-er2.webp", "media/thePee-er3.webp", "media/thePee-er4.webp", "media/thePee-er5.webp", "media/thePee-er6.webp"]
     },
     {
       id: "7",
-      src: "media/mockup-be79c598.webp",
+      src: "media/theBrawl1.webp",
       alt: "doggy",
       title: "The Brawl",
       text: "Let's just say a lot of bones were broken...and chewed on.",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/theBrawl1.webp","media/theBrawl1.webp", "media/theBrawl2.webp", "media/theBrawl3.webp", "media/theBrawl4.webp", "media/theBrawl5.webp", "media/theBrawl6.webp"]
     },
     {
       id: "8",
-      src: "media/mockup-52c49241.webp",
+      src: "media/tipToePub1.webp",
       alt: "doggy",
       title: "Tip Toe Pub",
       text: "So sneaky...",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/tipToePub1.webp","media/tipToePub1.webp", "media/tipToePub2.webp", "media/tipToePub3.webp", "media/tipToePub4.webp", "media/tipToePub5.webp", "media/tipToePub6.webp"]
     },
     {
       id: "9",
-      src: "media/mockup-a979a43d.webp",
+      src: "media/dogBath1.webp",
       alt: "doggy",
       title: "Dog Bath",
       text: "Scrub em clean!",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/dogBath1.webp","media/dogBath1.webp", "media/dogBath2.webp", "media/dogBath3.webp", "media/dogBath4.webp", "media/dogBath5.webp", "media/dogBath6.webp"]
     },
     {
       id: "10",
-      src: "media/mockup-a0529cee.webp",
+      src: "media/tongueWagger1.webp",
       alt: "doggy",
       title: "Tongue Wagger",
       text: "Tis a slobby one",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/tongueWagger1.webp","media/tongueWagger1.webp", "media/tongueWagger2.webp", "media/tongueWagger3.webp", "media/tongueWagger4.webp", "media/tongueWagger5.webp", "media/tongueWagger6.webp"]
     },
     {
       id: "11",
-      src: "media/mockup-295f01d2.webp",
+      src: "media/angryDog1.webp",
       alt: "doggy",
       title: "Angry Dog",
       text: "Isn't he cute when he's angry?",
       precio: "$9.99",
-      imagenes: ["media/mockup-954d2eff.webp","media/mockup-954d2eff.webp", "media/mockup-018b28ad.webp", "media/mockup-932d9c02.webp", "media/mockup-46220b5c.webp", "media/mockup-b707691c.webp", "media/mockup-5722417c.webp"]
+      imagenes: ["media/angryDog1.webp","media/angryDog1.webp", "media/angryDog2.webp", "media/angryDog3.webp", "media/angryDog4.webp", "media/angryDog5.webp", "media/angryDog6.webp"]
     },
   ];
   function saveLocalStorage() {
@@ -113,7 +113,7 @@ const cards = [
     
     cards.forEach((card) => {
         const cardLink = document.createElement("a");
-        cardLink.href = `theplayer.html?id=${card.id}`;
+        cardLink.href = `cards.html?id=${card.id}`;
         cardLink.style = "text-decoration: none"
         const cardElement = document.createElement("div");
         
@@ -135,11 +135,9 @@ const cards = [
   }
 function cargarCard(id) {
   let card = cards[id-1];
-  let arrayImagenes = card.imagenes;
   let imagenTop = document.getElementById("principal");
   let divCarrousel1 = document.getElementById("carousel-item");
   let divCarrousel2 = document.getElementById("carrouselDiv2");
-  
   // let imagenPrincipal = document.createElement("img");
   // imagenPrincipal.src = card.imagenes[0]; 
   // imagen1.appendChild(imagenPrincipal);
@@ -161,6 +159,8 @@ function cargarCard(id) {
   // let imagenCarrousel6 = document.createElement("img");
   // imagenPrincipal.src = card.imagenes[5]; 
   // imagen1.appendChild(imagenCarrousel6);
+
+  //esto para cargar las imagenes de cada carta, dependiendo del id que tenga la funcion como parametro
 for (let index = 0; index < card.imagenes.length; index++) {
   if (index === 0) {
     imagenTop.src = card.imagenes[0]; 
@@ -175,6 +175,44 @@ for (let index = 0; index < card.imagenes.length; index++) {
   }{
   }
   
+}
+//esto para cargar los contenidos, dependiendo del id que tenga la funcion como parametro
+let contenidos = document.getElementById("info");
+let quantityInput = document.getElementById("Quantity");
+let titulo = document.createElement("h2");
+titulo.textContent = card.title;
+let frase = document.createElement("h4");
+frase.textContent = card.text;
+let precio = document.createElement("h3");
+precio.textContent = card.precio;
+precio.id = "precio";
+
+contenidos.insertBefore(titulo, quantityInput);
+contenidos.insertBefore(frase, quantityInput);
+contenidos.insertBefore(precio, quantityInput);
+//aqui se insertan estos contenidos antes del input "quantity"
+}
+//esto ajusta el precio, en funcion del tamaño del sticker que quiera el usuario
+function cambiarPrecio() {
+let params = new URLSearchParams(window.location.search);
+let id = params.get('id');
+let card = cards[id-1];
+let tamaño = document.getElementById("size");
+let precio = document.getElementById("precio");
+switch (tamaño.value) {
+  case "1":
+    precio.textContent = card.precio;
+    break;
+    case "2":
+    precio.textContent = "10.99";
+    break;
+    case "3":
+    precio.textContent = "11.99";
+    break;
+    default:
+    precio.textContent = card.precio;
+    
+    break;
 }
 
 }
