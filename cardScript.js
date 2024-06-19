@@ -16,11 +16,11 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    showSlide(currentSlide + 3);
+    showSlide(currentSlide - 3);
 }
 
 function prevSlide() {
-    showSlide(currentSlide - 3);
+    showSlide(currentSlide + 3);
 }
 
 function updateMainImage(src) {

@@ -204,10 +204,10 @@ switch (tamaño.value) {
     precio.textContent = card.precio;
     break;
     case "2":
-    precio.textContent = "10.99";
+    precio.textContent = 10.99;
     break;
     case "3":
-    precio.textContent = "11.99";
+    precio.textContent = 11.99;
     break;
     default:
     precio.textContent = card.precio;
@@ -216,12 +216,21 @@ switch (tamaño.value) {
 }
 
 }
-// function addToCard(id) {
-//   let params = new URLSearchParams(window.location.search);
-//   let id = params.get('id');
-//   let card = cards[id-1];
-//   card.forEach((element) => console.log(element));
-//   let addToCart = document.getElementById("add");
-
-
-// }
+function addToCard(id) {
+  let tamaño = document.getElementById("size");
+  const tamañoSeleccionado = tamaño.options[tamaño.selectedIndex].text;
+let precio = document.getElementById("precio");
+  const params = new URLSearchParams(window.location.search);
+  const producto = params.get("id");
+  console.log(producto);
+  console.log(typeof producto);
+  const arrayInput = JSON.parse(localStorage.getItem("cards"));
+ if (producto && arrayInput) {
+     let card = arrayInput.filter((element) => element.id == producto)
+     card.push(tamañoSeleccionado);
+     card.push(precio.textContent);
+     console.log(card);
+     localStorage.setItem("totalProduct", JSON.stringify(card));
+ }
+ 
+}

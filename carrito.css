@@ -71,3 +71,7 @@ footer .footerTexto {
     flex-direction: row;
     justify-content: center;
 }
+tbody img {
+    width: 90px;
+   
+}

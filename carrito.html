@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script src="carrito.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,45 @@
                         <th class="tableHead">REMOVE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tablaCarrito">
+                <script>
+                    function comprar() {
+    const datosCard = localStorage.getItem("totalProduct");
+    console.log(datosCard);
+    const datosCardJson = JSON.parse(datosCard);
+    let imagenPrincipal = datosCardJson[0].src;
+    let titulo = document.createElement("p");
+    titulo.textContent = datosCardJson[0].title + ", " + datosCardJson[1];
+    // let tamaño = document.createElement("p");
+    // tamaño.textContent
+    let tbody = document.getElementById("tablaCarrito");
+    let tablaTd1 = document.createElement("td");
+    let imagen = document.createElement("img");
+    const fila = document.createElement("tr");
+    imagen.src = imagenPrincipal;
+    tablaTd1.appendChild(imagen);
+    tablaTd1.appendChild(titulo);
+    fila.appendChild(tablaTd1);
+    tbody.appendChild(fila);
+    const tablaTd2 = document.createElement("td");
+    let cantidad = document.createElement("input");
+    cantidad.type = "number";
+    cantidad.min= 1;
+    cantidad.max= 100;
+    cantidad.id="cantidad";
+    cantidad.value= 1;
+    tablaTd2.appendChild(cantidad);
+    fila.appendChild(tablaTd2);
+    let tablaTd3 = document.createElement("td")
+    let precio = document.createElement("p");
+    precio.textContent = datosCardJson[2];
+    tablaTd3.appendChild(precio);
+    fila.appendChild(tablaTd3);
+}
+document.addEventListener("DOMContentLoaded", function() {
+      comprar();
+    });
+                </script>
                 </tbody>
             </table>
     </div>

@@ -62,22 +62,6 @@
 			let id = params.get('id');
 			cargarCard(id);
         });
-         function getIdFromUrl() {
-             const params = new URLSearchParams(window.location.search);
-             const producto = params.get("id");
-             console.log(producto);
-             console.log(typeof producto);
-             const arrayInput = JSON.parse(localStorage.getItem("cards"));
-            if (producto && arrayInput) {
-                let card = arrayInput.filter((element) => element.id == producto)
-                console.log(card);
-                localStorage.setItem("totalProduct", JSON.stringify(card));
-            }
-            
-            return params.get('id');
-         }
-
-getIdFromUrl();
 
     </script>
     
