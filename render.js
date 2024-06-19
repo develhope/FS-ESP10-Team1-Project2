@@ -216,3 +216,12 @@ switch (tamaño.value) {
 }
 
 }
+// function addToCard(id) {
+//   let params = new URLSearchParams(window.location.search);
+//   let id = params.get('id');
+//   let card = cards[id-1];
+//   card.forEach((element) => console.log(element));
+//   let addToCart = document.getElementById("add");
+
+
+// }
