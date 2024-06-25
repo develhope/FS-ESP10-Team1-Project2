@@ -218,18 +218,39 @@ switch (tamaño.value) {
 }
 function addToCard(id) {
   let tamaño = document.getElementById("size");
-  const tamañoSeleccionado = tamaño.options[tamaño.selectedIndex].text;
+  let tamañoSeleccionado = tamaño.options[tamaño.selectedIndex].text;
+  let quantity = document.getElementById("cantidad");
 let precio = document.getElementById("precio");
+
   const params = new URLSearchParams(window.location.search);
   const producto = params.get("id");
   console.log(producto);
   console.log(typeof producto);
   const arrayInput = JSON.parse(localStorage.getItem("cards"));
+  arrayInput.forEach((el) =>{
+    if (el.id == producto) {
+      el.size = tamañoSeleccionado;
+      el.price = precio.textContent;
+      el.quantity = quantity.value;
+;    } 
+});
+
  if (producto && arrayInput) {
-     let card = arrayInput.filter((element) => element.id == producto)
-     card.push(tamañoSeleccionado);
-     card.push(precio.textContent);
+     let card = arrayInput.filter((element) => element.id == producto);
      console.log(card);
+     if (card) {
+      card.size = tamañoSeleccionado;
+      card.price = precio.textContent;
+      card.quantity = quantity.value;
+    } else {
+      let nuevoProducto = {
+  id: producto,
+  size: tamañoSeleccionado,
+  price: precio.textContent,
+  quantity: quantity.value
+};
+      arrayInput.push(nuevoProducto);
+    }
      localStorage.setItem("totalProduct", JSON.stringify(card));
  }
  
