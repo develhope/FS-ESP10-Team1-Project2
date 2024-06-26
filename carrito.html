@@ -28,14 +28,18 @@
                 </thead>
                 <tbody id="tablaCarrito">
                 <script>
-                    function comprar() {
+function comprar() {
     const datosCard = localStorage.getItem("totalProduct");
     console.log(datosCard);
     const datosCardJson = JSON.parse(datosCard);
-    let imagenPrincipal = datosCardJson[0].src;
+  return datosCardJson;
+}
+function cargarDatos() {
+   let datos = comprar()
+    datos.forEach(element => {
+    let imagenPrincipal = element.src;
     let titulo = document.createElement("p");
-    titulo.textContent = datosCardJson[0].title + ", " + datosCardJson[0].size;
-   
+    titulo.textContent = element.title + ", " + element.size;
 
     let tbody = document.getElementById("tablaCarrito");
     let tablaTd1 = document.createElement("td");
@@ -47,41 +51,49 @@
     fila.appendChild(tablaTd1);
     tbody.appendChild(fila);
 
-    
     const tablaTd2 = document.createElement("td");
     let cantidad = document.createElement("input");
     cantidad.type = "number";
-    cantidad.min= 1;
-    cantidad.max= 100;
-    cantidad.id="cantidad";
-    cantidad.value= datosCardJson[0].quantity;
+    cantidad.min = 1;
+    cantidad.max = 100;
+    cantidad.id = "cantidad";
+    cantidad.value = element.quantity;
     tablaTd2.appendChild(cantidad);
     fila.appendChild(tablaTd2);
 
-
-    let tablaTd3 = document.createElement("td")
+    let tablaTd3 = document.createElement("td");
     let precio = document.createElement("p");
-    precio.textContent = datosCardJson[0].price;
+    precio.textContent = element.price;
     tablaTd3.appendChild(precio);
     fila.appendChild(tablaTd3);
+
     const tablaTd4 = document.createElement("td");
     let botonBorrar = document.createElement("button");
-    botonBorrar.onclick = borrar(datosCard, datosCardJson[0].id);
-    let imagenBorrar = document.createElement("img");
-    imagenBorrar.src = "media/cruz.png";
-    botonBorrar.appendChild(imagenBorrar);
+    botonBorrar.textContent = "borrar"
+    botonBorrar.onclick = () => borrar(element.id);
+    //     borrar(datosCardJson[0].id);
+    //     tbody.removeChild(fila);
+    
+    // let imagenBorrar = document.createElement("img");
+    // imagenBorrar.src = "media/cruz.png";
+    // botonBorrar.appendChild(imagenBorrar);
     tablaTd4.appendChild(botonBorrar);
     fila.appendChild(tablaTd4);
+});
 }
-function borrar(array, id) {
-    const datosCard = localStorage.getItem("totalProduct");
-    const datosCardJson = JSON.parse(datosCard);
-    return datosCardJson.filter(producto => producto.id !== id);
-}
+function borrar(id) {
+    let datosCard = localStorage.getItem("totalProduct");
+    let datosCardJson = JSON.parse(datosCard);
+    console.log("entra");
+    let idProduct = id;
+    datosCardJson = datosCardJson.filter(producto => producto.id !== idProduct);
+     localStorage.setItem("totalProduct", JSON.stringify(datosCardJson));
+ }
+
 document.addEventListener("DOMContentLoaded", function() {
-      comprar();
-    });
-                </script>
+    cargarDatos();
+});
+</script>
                 </tbody>
             </table>
     </div>

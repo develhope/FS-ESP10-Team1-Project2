@@ -220,38 +220,30 @@ function addToCard(id) {
   let tamaño = document.getElementById("size");
   let tamañoSeleccionado = tamaño.options[tamaño.selectedIndex].text;
   let quantity = document.getElementById("cantidad");
-let precio = document.getElementById("precio");
-
+  let precio = document.getElementById("precio");
   const params = new URLSearchParams(window.location.search);
   const producto = params.get("id");
-  console.log(producto);
-  console.log(typeof producto);
-  const arrayInput = JSON.parse(localStorage.getItem("cards"));
-  arrayInput.forEach((el) =>{
+  const arrayTotalJs = JSON.parse(localStorage.getItem("cards"));
+  const arrayBayJs = JSON.parse(localStorage.getItem("totalProduct")) ? JSON.parse(localStorage.getItem("totalProduct")): [];
+  const productoToBay = arrayTotalJs.filter((element) => element.id == producto);
+
+ console.log(productoToBay[0]);
+
+  const arrayToBay = [...arrayBayJs, productoToBay[0]];
+
+  localStorage.setItem("totalProduct", JSON.stringify(arrayToBay));
+  
+  arrayTotalJs.forEach((el) =>{
     if (el.id == producto) {
       el.size = tamañoSeleccionado;
       el.price = precio.textContent;
       el.quantity = quantity.value;
-;    } 
+    } 
 });
 
- if (producto && arrayInput) {
-     let card = arrayInput.filter((element) => element.id == producto);
-     console.log(card);
-     if (card) {
-      card.size = tamañoSeleccionado;
-      card.price = precio.textContent;
-      card.quantity = quantity.value;
-    } else {
-      let nuevoProducto = {
-  id: producto,
-  size: tamañoSeleccionado,
-  price: precio.textContent,
-  quantity: quantity.value
-};
-      arrayInput.push(nuevoProducto);
-    }
-     localStorage.setItem("totalProduct", JSON.stringify(card));
+
+      
+
  }
  
-}
+  
