@@ -123,4 +123,13 @@
 
 
 
-
+.back:hover {
+    background-color:  rgb(233, 233, 241);/* Color de fondo al hacer hover */
+}
+.back img {
+    width: 1.2vw;
+    height: 2.5vh;
+}
+.add:hover {
+    background-color:  rgba(164, 164, 164, 0.775);/* Color de fondo al hacer hover */
+}

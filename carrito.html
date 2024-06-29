@@ -91,8 +91,10 @@ if (existingRow) {
     const imagenBorrar = document.createElement("img");
     imagenBorrar.id = 'tamañoCss'
     imagenBorrar.src = "media/cruz.png";
+    
     imagenBorrar.addEventListener("click", () => {
-            borrar(element.id);
+        burbuja();    
+        borrar(element.id);
             tbody.removeChild(fila);
             subtotal();
         });
@@ -115,6 +117,7 @@ tablaTd4.appendChild(imagenBorrar);
     
 }
 function borrar(id) {
+    
     let datosCard = localStorage.getItem("totalProduct");
     let datosCardJson = JSON.parse(datosCard);
     console.log("entra");

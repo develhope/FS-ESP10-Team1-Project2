@@ -134,64 +134,48 @@ function renderCards(cards) {
   });
 }
 function cargarCard(id) {
-let card = cards[id-1];
-let imagenTop = document.getElementById("principal");
-let divCarrousel1 = document.getElementById("carousel-item");
-let divCarrousel2 = document.getElementById("carrouselDiv2");
-// let imagenPrincipal = document.createElement("img");
-// imagenPrincipal.src = card.imagenes[0]; 
-// imagen1.appendChild(imagenPrincipal);
-// let imagenCarrousel1 = document.createElement("img");
-// imagenPrincipal.src = card.imagenes[1]; 
-// imagen1.appendChild(imagenCarrousel1);
-// let imagenCarrousel2 = document.createElement("img");
-// imagenPrincipal.src = card.imagenes[2]; 
-// imagen1.appendChild(imagenCarrousel2);
-// let imagenCarrousel3 = document.createElement("img");
-// imagenPrincipal.src = card.imagenes[3]; 
-// imagen1.appendChild(imagenCarrousel3);
-// let imagenCarrousel4 = document.createElement("img");
-// imagenPrincipal.src = card.imagenes[4]; 
-// imagen1.appendChild(imagenCarrousel4);
-// let imagenCarrousel5 = document.createElement("img");
-// imagenPrincipal.src = card.imagenes[5]; 
-// imagen1.appendChild(imagenCarrousel5);
-// let imagenCarrousel6 = document.createElement("img");
-// imagenPrincipal.src = card.imagenes[5]; 
-// imagen1.appendChild(imagenCarrousel6);
+  let card = cards[id-1];
+  let imagenTop = document.getElementById("principal");
+  let divCarrousel1 = document.getElementById("carousel-item");
+  let divCarrousel2 = document.getElementById("carrouselDiv2");
 
-//esto para cargar las imagenes de cada carta, dependiendo del id que tenga la funcion como parametro
-for (let index = 0; index < card.imagenes.length; index++) {
-if (index === 0) {
-  imagenTop.src = card.imagenes[0]; 
-} else if (index < 5) {
-  let imagenCarrousel = document.createElement("img");
-  imagenCarrousel.src = card.imagenes[index]; 
-  divCarrousel1.appendChild(imagenCarrousel)
-} else {
-  let imagenCarrousel2 = document.createElement("img");
-  imagenCarrousel2.src = card.imagenes[index]; 
-  divCarrousel2.appendChild(imagenCarrousel2);
-}{
-}
-
-}
-//esto para cargar los contenidos, dependiendo del id que tenga la funcion como parametro
-let contenidos = document.getElementById("info");
-let quantityInput = document.getElementById("Quantity");
-let titulo = document.createElement("h2");
-titulo.textContent = card.title;
-let frase = document.createElement("h4");
-frase.textContent = card.text;
-let precio = document.createElement("h3");
-precio.textContent = card.precio;
-precio.id = "precio";
-
-contenidos.insertBefore(titulo, quantityInput);
-contenidos.insertBefore(frase, quantityInput);
-contenidos.insertBefore(precio, quantityInput);
-//aqui se insertan estos contenidos antes del input "quantity"
-}
+  for (let index = 0; index < card.imagenes.length; index++) {
+    if (index === 0) {
+      imagenTop.src = card.imagenes[0]; 
+    } else if (index < 5) {
+      let imagenCarrousel = document.createElement("img");
+      imagenCarrousel.src = card.imagenes[index]; 
+      //
+      imagenCarrousel.onclick = () => imagenTop.src = imagenCarrousel.src;
+      //
+      divCarrousel1.appendChild(imagenCarrousel)
+    } else {
+      let imagenCarrousel2 = document.createElement("img");
+      imagenCarrousel2.src = card.imagenes[index]; 
+      //
+      imagenCarrousel2.onclick = () => imagenTop.src = imagenCarrousel2.src;
+      //
+      divCarrousel2.appendChild(imagenCarrousel2);
+    }{
+    }
+  
+  }
+  //esto para cargar los contenidos, dependiendo del id que tenga la funcion como parametro
+  let contenidos = document.getElementById("info");
+  let quantityInput = document.getElementById("Quantity");
+  let titulo = document.createElement("h2");
+  titulo.textContent = card.title;
+  let frase = document.createElement("h4");
+  frase.textContent = card.text;
+  let precio = document.createElement("h3");
+  precio.textContent = card.precio;
+  precio.id = "precio";
+  
+  contenidos.insertBefore(titulo, quantityInput);
+  contenidos.insertBefore(frase, quantityInput);
+  contenidos.insertBefore(precio, quantityInput);
+  //aqui se insertan estos contenidos antes del input "quantity"
+  }
 //esto ajusta el precio, en funcion del tamaño del sticker que quiera el usuario
 function cambiarPrecio() {
 let params = new URLSearchParams(window.location.search);
@@ -217,7 +201,8 @@ case "1":
 
 }
 function addToCard(id) {
-let tamaño = document.getElementById("size");
+burbuja();
+  let tamaño = document.getElementById("size");
 let tamañoSeleccionado = tamaño.options[tamaño.selectedIndex].text;
 let quantity = document.getElementById("cantidad");
 let precio = document.getElementById("precio");

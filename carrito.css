@@ -87,3 +87,11 @@ tbody img {
     width: 90px;
    
 }
+
+.enlaces .enlaceProducts:hover {
+    background-color: rgb(233, 233, 241); /* Color de fondo al hacer hover */
+}
+
+.enlaces .enlaceCheckout {
+    background-color: rgba(91, 33, 182);
+}
